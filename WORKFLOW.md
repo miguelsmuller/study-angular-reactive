@@ -10,13 +10,13 @@ git checkout -b feature/{X} develop
 # Bring code to develop
 git checkout develop
 git merge --squash feature/{X}
-git commit -m '{MESSAGE}'
+git commit
 
 # Send to remote
 git push -u origin develop
 
 # Delete unnecessary branches
-git branch -d feature/X
+git branch -D feature/X
 git push origin --delete feature/{X}
 ```
 
@@ -34,7 +34,7 @@ git checkout -b release/{X.0.0} develop
 # Bring code to develop
 git checkout develop
 git merge --squash release/{X.0.0}
-git commit -m '{X.0.0}'
+git commit
 
 # Send to remote
 git push -u origin develop
@@ -51,7 +51,7 @@ git push -u origin master
 git push --tags origin
 
 # Then delete branches as needed
-git branch -d release/{X.0.0}
+git branch -D release/{X.0.0}
 git push origin --delete release/{X.0.0}
 ```
 
@@ -70,7 +70,7 @@ git checkout -b hotfix/{0.0.X} master
 # Bring code to develop
 git checkout develop
 git merge --squash hotfix/{0.0.X}
-git commit -m '{0.0.X}'
+git commit
 
 # Send to remote
 git push -u origin develop
@@ -83,6 +83,6 @@ git merge develop
 git tag -a {0.0.X} -m '{0.0.X}'
 
 # Then delete branches as needed
-git branch -d hotfix/{0.0.X}
+git branch -D hotfix/{0.0.X}
 git push origin --delete hotfix/{0.0.X}
 ```
