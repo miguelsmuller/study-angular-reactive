@@ -1,0 +1,62 @@
+{
+  "editor.wordWrapColumn": 100,
+  "editor.rulers": [100],
+  "editor.wordWrap": "bounded",
+  "editor.minimap.enabled": false,
+
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "editor.formatOnSave": false
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "editor.formatOnSave": false
+  },
+  "[json]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "editor.formatOnSave": false
+  },
+  "[html]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "editor.formatOnSave": false
+  },
+
+  //"editor.codeActionsOnSave": { "source.fixAll.tslint": true },
+
+  "css.validate": false,
+
+  "prettier.tabWidth": 2,
+  "prettier.singleQuote": true,
+  "prettier.useTabs": false,
+
+  "html.format.wrapAttributes": "auto",
+  "html.format.wrapLineLength": 0,
+  "html.format.unformatted": "a, abbr, acronym, b, bdo, big, br, ...",
+
+  "workbench.editor.enablePreview": false,
+
+  "auto-rename-tag.activationOnLanguage": ["html", "xml"],
+
+  "files.exclude": {
+    ".firebase": true,
+    "**/node_modules": true,
+    "dist": true,
+    ".husky": true,
+    ".vscode": true,
+    "coverage": true,
+    "www": true
+  },
+  "angular.enable-strict-mode-prompt": false,
+}

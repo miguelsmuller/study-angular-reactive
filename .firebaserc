@@ -1,0 +1,17 @@
+{
+  "targets": {
+    "angular-11-crud": {
+      "hosting": {
+        "production": [
+          "angular-11-crud"
+        ],
+        "development": [
+          "angular-11-crud-development"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-11-crud-development"
+  }
+}

@@ -1,0 +1,33 @@
+:host{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+.list-product{
+  flex: 0 0 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-right: 1px solid rgba(0, 38, 51, 0.12);
+  height: 100%;
+}
+.content-product{
+  flex: 1 0;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+.action-product{
+  width: 100%;
+  margin: 8px auto 8px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.img-empty-state{
+  max-width: 50%;
+}

@@ -1,0 +1,16 @@
+:host ::ng-deep{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1.75rem 2rem;
+
+  .anchor{
+    display: none !important;
+  }
+}
+
+.container{
+  max-width: 750px;
+}
+

@@ -1,0 +1,34 @@
+<mat-toolbar color="primary" class="header">
+  <button mat-icon-button (click)="sidenav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <app-menu></app-menu>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="side" fixedInViewport="false" opened>
+    <mat-action-list dense>
+      <div mat-subheader>{{ headerSide.nivel1.title }}</div>
+      <mat-list-item [routerLink]="[item.action]" mat-list-item *ngFor="let item of headerSide.nivel1.itens">
+        <mat-icon mat-list-icon [svgIcon]="item.icon"></mat-icon>
+        <div mat-line>{{ item.name }}</div>
+      </mat-list-item>
+
+      <mat-divider></mat-divider>
+
+      <div mat-subheader>{{ headerSide.nivel2.title }}</div>
+      <mat-list-item *ngFor="let note of headerSide.nivel2.itens">
+        <mat-icon mat-list-icon>note</mat-icon>
+        <div mat-line>{{ note.name }}</div>
+        <div mat-line>{{ note.updated | date }}</div>
+      </mat-list-item>
+    </mat-action-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<app-footer></app-footer>
