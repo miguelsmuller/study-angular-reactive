@@ -1,8 +1,8 @@
 # **ANGULAR CRUD - BEST PRACTICES**
-![Code quality](https://img.shields.io/scrutinizer/quality/g/miguelsmuller/angular-11-crud/master?style=flat-square)
-![GitHub last commit](https://img.shields.io/github/last-commit/miguelsmuller/angular-11-crud?style=flat-square)
-![GitHub repo size](https://img.shields.io/github/repo-size/miguelsmuller/angular-11-crud?style=flat-square)
-![GitHub branch checks state](https://img.shields.io/github/checks-status/miguelsmuller/angular-11-crud/master?style=flat-square)
+![Code quality](https://img.shields.io/scrutinizer/quality/g/miguelsmuller/angular-crud/master?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/miguelsmuller/angular-crud?style=flat-square)
+![GitHub repo size](https://img.shields.io/github/repo-size/miguelsmuller/angular-crud?style=flat-square)
+![GitHub branch checks state](https://img.shields.io/github/checks-status/miguelsmuller/angular-crud/master?style=flat-square)
 
 ## 💥 **Overview**
 This project is a study system in **[Angular](https://angular.io/)** and implementing using the best practices of reactive programming.
@@ -13,7 +13,7 @@ It comes initially with a authentication using **[FireBase Service](https://fire
 
 #### **Features**:
 - Use **Material Design** with adequate customization.
-- Component interaction with @Input() and @Output()
+- Component interaction with **@Input()** and **@Output()**
 - Managing global and local state with **NgRx**
 - Use of **implementation classes** and **dependency injection**
 - Find and fix problems in TS with **ESlint**

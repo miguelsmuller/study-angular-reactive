@@ -48,3 +48,6 @@ Thumbs.db
 /src/environments/*.ts
 !/src/environments/environment.example.ts
 TESTS-*.xml
+node_modules
+.firebase
+firebase-debug.log

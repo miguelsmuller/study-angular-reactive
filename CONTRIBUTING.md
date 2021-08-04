@@ -1,6 +1,6 @@
 # **CONTRIBUTING**
 
-To report an issue, please [create a new pull request](https://github.com/miguelsmuller/angular-11-crud/pulls).  
+To report an issue, please [create a new pull request](https://github.com/miguelsmuller/angular-crud/pulls).  
 
 ##### **Important Information**  
 Before sending your collaboration, check your code and the conventions adopted in the project and take the following steps:

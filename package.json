@@ -1,5 +1,5 @@
 {
-  "name": "crud-angular",
+  "name": "angular-crud",
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",

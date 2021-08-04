@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "crud-angular": {
+    "angular-crud": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/crud-angular",
+            "outputPath": "dist/angular-crud",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -73,10 +73,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "crud-angular:build:production"
+              "browserTarget": "angular-crud:build:production"
             },
             "development": {
-              "browserTarget": "crud-angular:build:development"
+              "browserTarget": "angular-crud:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -84,7 +84,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "crud-angular:build"
+            "browserTarget": "angular-crud:build"
           }
         },
         "test": {
@@ -121,7 +121,7 @@
       }
     }
   },
-  "defaultProject": "crud-angular",
+  "defaultProject": "angular-crud",
   "cli": {
     "defaultCollection": "@ngrx/schematics"
   }
