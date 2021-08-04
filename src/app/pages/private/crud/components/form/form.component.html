@@ -1,0 +1,39 @@
+<form [formGroup]="productForm" *ngIf="productData$ | async as product" (ngSubmit)="submitForm()">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Form</mat-card-title>
+      <mat-card-subtitle>Description</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <mat-form-field appearance="fill">
+        <mat-label>Product ID</mat-label>
+        <input matInput #id formControlName="id" placeholder="Product ID" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Product Name</mat-label>
+        <input matInput #name formControlName="name" placeholder="Product name" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Date Inserted</mat-label>
+        <input matInput formControlName="createdAt" [matDatepicker]="createdAt" (focus)="createdAt.open()" />
+        <mat-datepicker-toggle matSuffix [for]="createdAt"></mat-datepicker-toggle>
+        <mat-datepicker #createdAt></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Product Image URL</mat-label>
+        <input matInput #photoURL formControlName="photoURL" placeholder="Product Image URL" />
+      </mat-form-field>
+
+      <mat-checkbox #isEnabled formControlName="isEnabled">Product is enabled?</mat-checkbox>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-flat-button color="primary" type="submit">Submit</button>
+      <button mat-stroked-button color="warn" *ngIf="product.id" (click)="deleteItem(product.id)">Excluir</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

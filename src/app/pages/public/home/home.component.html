@@ -1,0 +1,3 @@
+<ng-container *ngIf="content$ | async as content">
+  <div [innerHTML]="content | safe" class="container"></div>
+</ng-container>

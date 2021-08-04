@@ -1,0 +1,14 @@
+:host{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1.75rem 2rem;
+}
+
+.container{
+  max-width: 750px;
+}
+.anchor{
+  display: none !important;
+}

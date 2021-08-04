@@ -1,0 +1,16 @@
+<div class="list-product">
+  <div class="action-product">
+    <button mat-flat-button color="primary" (click)="setProduct(null)">New Product</button>
+    <button mat-flat-button color="primary" (click)="refreshList()">
+      <mat-icon>cached</mat-icon>
+    </button>
+  </div>
+
+  <app-list (selecteProduct)="setProduct($event)"></app-list>
+</div>
+
+<div class="content-product">
+  <div class="grid-cards">
+    <app-form [productId]="selectedProduct"></app-form>
+  </div>
+</div>
