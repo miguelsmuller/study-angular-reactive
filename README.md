@@ -31,6 +31,9 @@ Also make sure you have **Angular CLI** and **Firebase CLI** installed globally 
 Install dependencies of project with:  
 - `$ npm install`
 
+#### 📌 **First run - Environment files**  
+In the first execution of the project, it is **essential** to create the environment files (`environment.ts` and `environment.prod.ts`) in _**/src/environments**_ according to the model that follows inside the folder (`environment.example.ts`).
+
 ## 📂 **Project Structure**  
 ```
 src/                         project source code
