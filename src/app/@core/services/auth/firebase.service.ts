@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { from, Observable, of, throwError } from 'rxjs';
+import { from, Observable, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import firebase from 'firebase/app';
 
 import { IUser } from '@shared/schemas/user';
-import { AuthAbstractService } from './auth.abstract.service';
+import { IAuthService } from './iauth.service';
 
 @Injectable({
   providedIn: null,
 })
-export class AuthService implements AuthAbstractService {
+export class FireBaseService implements IAuthService {
   constructor(private fireAuthService: AngularFireAuth) {}
 
   login(): Observable<IUser> {

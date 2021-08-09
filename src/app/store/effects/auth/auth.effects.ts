@@ -4,11 +4,11 @@ import { catchError, map, concatMap } from 'rxjs/operators';
 import { of } from 'rxjs';
 
 import * as AuthActions from '@store/actions/auth.actions';
-import { AuthAbstractService } from '@core/services/auth/auth.abstract.service';
+import { IAuthService } from '@core/services/auth/iauth.service';
 
 @Injectable()
 export class AuthEffects {
-  constructor(private actions$: Actions, private authService: AuthAbstractService) {}
+  constructor(private actions$: Actions, private authService: IAuthService) {}
 
   login$ = createEffect(() => {
     return this.actions$.pipe(

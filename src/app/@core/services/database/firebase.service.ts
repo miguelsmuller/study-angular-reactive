@@ -6,11 +6,11 @@ import { map, switchMap, catchError } from 'rxjs/operators';
 import firebase from 'firebase/app';
 import Timestamp = firebase.firestore.Timestamp;
 
-import { DataBaseAbstractService } from './database.abstract.service';
+import { IDataBaseService } from './idatabase.service';
 import { IProduct } from '@shared/schemas/product';
 
 @Injectable()
-export class ProductService implements DataBaseAbstractService<IProduct> {
+export class FirebaseService implements IDataBaseService<IProduct> {
   TABLE = 'products';
 
   constructor(private afs: AngularFirestore) {}

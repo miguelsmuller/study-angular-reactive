@@ -4,12 +4,12 @@ import { Actions, createEffect, ofType } from '@ngrx/effects';
 import * as ProductActions from './product.actions';
 import { concatMap, map, catchError, tap } from 'rxjs/operators';
 import { of } from 'rxjs';
-import { DataBaseAbstractService } from '@core/services/database/database.abstract.service';
+import { IDataBaseService } from '@core/services/database/idatabase.service';
 import { IProduct } from '@shared/schemas/product';
 
 @Injectable()
 export class ProductEffects {
-  constructor(private actions$: Actions, private serviceProduct: DataBaseAbstractService<IProduct>) {}
+  constructor(private actions$: Actions, private serviceProduct: IDataBaseService<IProduct>) {}
 
   /**************************/
   /*    GET ALL PRODUCTS    */
