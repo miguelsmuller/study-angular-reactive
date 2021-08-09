@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
@@ -31,11 +31,10 @@ import { ProductService } from '@core/services/database/product.service';
     StoreModule.forFeature(fromProduct.productsFeatureKey, fromProduct.reducer),
     EffectsModule.forFeature([ProductEffects]),
     RouterModule.forChild([
-      {
-        path: '',
-        component: CrudComponent,
-      },
+      { path: '', component: CrudComponent },
+      { path: ':id', component: CrudComponent },
     ]),
+    FormsModule,
     ReactiveFormsModule,
     MatButtonModule,
     MatListModule,

@@ -3,6 +3,9 @@ import { AngularFirestore, DocumentReference } from '@angular/fire/firestore';
 import { Observable, of, from } from 'rxjs';
 import { map, switchMap, catchError } from 'rxjs/operators';
 
+import firebase from 'firebase/app';
+import Timestamp = firebase.firestore.Timestamp;
+
 import { DataBaseAbstractService } from './database.abstract.service';
 import { IProduct } from '@shared/schemas/product';
 
@@ -21,7 +24,12 @@ export class ProductService implements DataBaseAbstractService<IProduct> {
       .pipe(
         map((snapshot) => {
           return snapshot.map((item) => {
-            return { ...item.payload.doc.data(), id: item.payload.doc.id };
+            const listData = item.payload.doc.data();
+            const dateCustom = (<any>listData.createdAt) as Timestamp;
+            listData.id = item.payload.doc.id;
+            listData.createdAt = dateCustom.toDate();
+
+            return listData;
           });
         }),
         catchError(() => {

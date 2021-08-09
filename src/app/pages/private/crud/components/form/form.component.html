@@ -1,4 +1,4 @@
-<form [formGroup]="productForm" *ngIf="productData$ | async as product" (ngSubmit)="submitForm()">
+<form [formGroup]="reactiveForm" #viewForm="ngForm" (ngSubmit)="submitForm()">
   <mat-card>
     <mat-card-header>
       <mat-card-title>Form</mat-card-title>
@@ -6,8 +6,7 @@
     </mat-card-header>
 
     <mat-card-content>
-      <mat-form-field appearance="fill">
-        <mat-label>Product ID</mat-label>
+      <mat-form-field appearance="fill" *ngIf="formId!.value">
         <input matInput #id formControlName="id" placeholder="Product ID" />
       </mat-form-field>
 
@@ -33,7 +32,7 @@
 
     <mat-card-actions>
       <button mat-flat-button color="primary" type="submit">Submit</button>
-      <button mat-stroked-button color="warn" *ngIf="product.id" (click)="deleteItem(product.id)">Excluir</button>
+      <button mat-stroked-button color="warn" *ngIf="formId!.value" (click)="deleteItem()">Excluir</button>
     </mat-card-actions>
   </mat-card>
 </form>

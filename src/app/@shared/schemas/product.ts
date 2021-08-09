@@ -1,7 +1,7 @@
 export interface IProduct {
   id: string;
   name: string;
-  createdAt: string;
+  createdAt: Date | null;
   isEnabled: boolean;
   photoURL?: string;
 }
@@ -9,7 +9,7 @@ export interface IProduct {
 export const emptyProduct: IProduct = {
   id: '',
   name: '',
-  createdAt: '',
+  createdAt: null,
   isEnabled: true,
   photoURL: '',
 };
