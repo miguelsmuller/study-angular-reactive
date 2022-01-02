@@ -51,3 +51,8 @@ TESTS-*.xml
 node_modules
 .firebase
 firebase-debug.log
+
+
+.env
+/src/environments/**
+!/src/environments/environment.exp.ts

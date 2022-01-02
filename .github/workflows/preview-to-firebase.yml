@@ -1,0 +1,39 @@
+name: Build and Deploy Preview
+
+on:
+  push:
+    branches:
+      - develop
+      - feature/**
+      - fix/**
+
+jobs:
+  run-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get latest code
+        uses: actions/checkout@v2
+
+      - name: Install Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build:prod:live
+        env:
+          EMAIL_API_FROM: ${{ secrets.EMAIL_API_FROM }}
+          EMAIL_API_KEY: ${{ secrets.EMAIL_API_KEY }}
+          EMAIL_API_URL: ${{ secrets.EMAIL_API_URL }}
+
+      - name: Deploy to Firebase
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_STUDY_ANGULAR_REACTIVE }}'
+          projectId: study-angular-reactive
+          expires: 30d
+          channelId: preview
